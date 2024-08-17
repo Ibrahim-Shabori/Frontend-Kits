@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "QuickSand", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  position: relative;
+}
+
+.container.change {
+  background-color: #262626;
+  color: #ccc;
+}
+
+.master-card {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.4);
+  width: 60rem;
+  height: 30rem;
+  border-radius: 2rem;
+  position: relative;
+}
+
+.container.change .master-card {
+  background-color: rgba(53, 53, 53, 1);
+}
+
+.master-card .card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-details h1 {
+  font-size: 3rem;
+}
+
+.card-details img {
+  width: 6rem;
+}
+
+.card-details .card-info {
+  font-size: 1.8rem;
+}
+
+.card-details .card-info .date-specifier {
+  font-weight: 200;
+}
+
+.two-circles {
+  align-self: flex-end;
+  display: flex;
+}
+
+.two-circles div {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.two-circles .circle-1 {
+  background-color: #eb001b;
+}
+
+.two-circles .circle-2 {
+  background-color: #ff5f00;
+  opacity: 0.7;
+  margin-left: -3rem;
+}
+
+.dark-light-btn {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: #eee8e1;
+  text-align: center;
+  position: absolute;
+  top: 7rem;
+  right: 7rem;
+  cursor: pointer;
+}
+
+.container.change .dark-light-btn {
+  background-color: #464646;
+}
+
+.dark-light-btn i {
+  font-size: 4rem;
+  line-height: 6rem;
+}
