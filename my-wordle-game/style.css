@@ -1,0 +1,218 @@
+:root {
+  --black: #1f1f1f;
+  --white: #ebeceb;
+  --gray: #b7b7b7;
+  --dark-gray: #939393;
+  --dark-zaitoon: #4d5330;
+  --zaitoon: #8b956d;
+  --light-zaitoon: #c4cfa1;
+  --red: #d44848;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Silkscreen", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--white);
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.container .gameboy {
+  width: 54.72rem;
+  height: 90.72rem;
+  border: 1px solid var(--gray);
+  border-radius: 1.44rem;
+  border-bottom-right-radius: 11.52rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 4px 4px 0px #000;
+}
+
+.container .gameboy .screen-container {
+  background-color: var(--dark-gray);
+  width: 46.08rem;
+  height: 34.56rem;
+  border-radius: 1.44rem;
+  border-bottom-right-radius: 5.76rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .gameboy .screen-container .win-window {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 5rem;
+  background-color: #3cb753;
+  color: var(--white);
+  transition: all 0.5s ease-in-out;
+}
+
+.container .gameboy .screen-container .lose-window {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 5rem;
+  background-color: #ec3838;
+  color: var(--white);
+  transition: all 0.5s ease-in-out;
+}
+
+.container .gameboy .screen-container .right-answer {
+  position: absolute;
+  bottom: 3.5rem;
+  padding: 1rem;
+  font-size: 3rem;
+  background-color: var(--white);
+  color: #3cb753;
+  border-radius: 1rem;
+}
+
+.container .gameboy .screen-container .screen {
+  background-color: var(--light-zaitoon);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 6px;
+}
+
+.container .gameboy .screen-container .screen .trial {
+  display: flex;
+  gap: 5px;
+}
+
+.container .gameboy .screen-container .screen .trial .letter {
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  display: grid;
+  place-items: center;
+  font-size: 2.4rem;
+  border: 2.5px solid var(--zaitoon);
+  color: var(--black);
+  background-color: transparent;
+}
+
+.container .gameboy .screen-container .screen .trial .current-letter {
+  border-color: var(--black);
+}
+
+.container .gameboy .screen-container .screen .trial .correct-right-place {
+  background-color: #3cb753;
+  color: var(--white);
+}
+
+.container .gameboy .screen-container .screen .trial .correct-wrong-place {
+  background-color: #3cb75335;
+  color: var(--white);
+}
+
+.container .gameboy .screen-container .screen .trial .wrong {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.container .gameboy .controls {
+  display: flex;
+  justify-content: space-between;
+  width: 46.08rem;
+  padding-left: 4rem;
+}
+
+.container .gameboy .controls .arrows {
+  position: relative;
+}
+
+.container .gameboy .controls .arrows .arrow {
+  width: 4.32rem;
+  height: 12.96rem;
+  background-color: var(--black);
+  border-radius: 5px;
+}
+
+.container .gameboy .controls .arrows .arrow:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.container .gameboy .controls .joy-sticks .joy-stick {
+  width: 7.2rem;
+  height: 7.2rem;
+  background-color: var(--red);
+  border-radius: 50%;
+}
+
+.container .gameboy .controls .joy-sticks .joy-stick:nth-of-type(2) {
+  transform: translate(-7rem, -3rem);
+}
+
+.container .gameboy .keyboard-container .keyboard {
+  display: grid;
+  width: 46.08rem;
+  height: 34.56rem;
+  background-color: var(--zaitoon);
+  padding: 0.6rem;
+  display: grid;
+  height: 100%;
+  justify-content: center;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.3rem;
+  text-align: center;
+  font-size: 4.4rem;
+  border-radius: 1rem;
+}
+
+.container .gameboy .keyboard-container .keyboard div {
+  border: 1px solid var(--light-zaitoon);
+  color: var(--light-zaitoon);
+  border-radius: 0.4rem;
+}
+
+.container .gameboy .keyboard-container .keyboard .enter {
+  grid-column: span 2;
+}
+
+.container
+  .gameboy
+  .keyboard-container
+  .keyboard
+  .keyboard-letter-hover-effect {
+  background-color: var(--light-zaitoon);
+  color: var(--zaitoon);
+  border-color: var(--zaitoon);
+}

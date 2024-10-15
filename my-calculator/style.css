@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+  font-family: monospace;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  border-radius: 0px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  font-size: 6rem;
+  font-weight: bolder;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.container .my-calculator .screen {
+  grid-area: screen;
+  display: grid;
+  background-color: #000;
+  color: #fff;
+  place-items: center;
+}
+
+.container .my-calculator .screen .res {
+  text-align: right;
+  font-size: 6rem;
+  font-weight: bolder;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.container .my-calculator .clear-btn {
+  grid-area: clear;
+}
+
+.container .my-calculator .zero-btn {
+  grid-area: zero;
+}
+
+.container .my-calculator .one-btn {
+  grid-area: one;
+}
+
+.container .my-calculator .two-btn {
+  grid-area: two;
+}
+
+.container .my-calculator .three-btn {
+  grid-area: three;
+}
+
+.container .my-calculator .four-btn {
+  grid-area: four;
+}
+
+.container .my-calculator .five-btn {
+  grid-area: five;
+}
+
+.container .my-calculator .six-btn {
+  grid-area: six;
+}
+
+.container .my-calculator .seven-btn {
+  grid-area: seven;
+}
+
+.container .my-calculator .eight-btn {
+  grid-area: eight;
+}
+
+.container .my-calculator .nine-btn {
+  grid-area: nine;
+}
+
+.container .my-calculator .plus-btn {
+  grid-area: plus;
+  background-color: #f09d09;
+  color: #fff;
+}
+
+.container .my-calculator .minus-btn {
+  grid-area: minus;
+  background-color: #f09d09;
+  color: #fff;
+}
+
+.container .my-calculator .mult-btn {
+  grid-area: mult;
+  background-color: #f09d09;
+  color: #fff;
+}
+
+.container .my-calculator .division-btn {
+  grid-area: division;
+  background-color: #f09d09;
+  color: #fff;
+}
+
+.container .my-calculator .back-btn {
+  grid-area: back;
+}
+
+.container .my-calculator .equal-btn {
+  grid-area: equal;
+  background-color: #f09d09;
+  color: #fff;
+}
+
+.container .my-calculator {
+  display: grid;
+  gap: 2px;
+  width: 60rem;
+  height: 90rem;
+  background-color: #000;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 6.6fr 7fr 7fr 7fr 7fr 7fr;
+
+  grid-template-areas:
+    "screen screen screen screen"
+    "clear clear back division"
+    "seven eight nine mult"
+    "four five six minus"
+    "one two three plus"
+    "zero zero zero equal";
+}
